@@ -6,33 +6,34 @@ var compteurOrdi = 0;
 var compteurChoice = 0;
 
 function game(){
-
+  do {
     if (ordi === choice){
       alert("égalité");
-      alert(compteurOrdi + "-" + compteurChoice)
+      alert("ordi" + " " + compteurOrdi + "-" + "vous" + " " +compteurChoice)
     }
    else if(ordi === tab[0] && choice === "feuille"){
      alert ("Vous avez gagné");
      compteurChoice ++;
-     alert(compteurOrdi + "-" + compteurChoice)
+     alert("ordi" + " " +compteurOrdi + "-" + "vous" + " " + compteurChoice)
    }
    else if (ordi === tab[1] && choice === "ciseaux"){
      alert ("Vous avez gagné");
      compteurChoice ++;
-     alert(compteurOrdi + "-" + compteurChoice)
+     alert("ordi" + " " +compteurOrdi + "-" + "vous" + " " +compteurChoice)
    }
    else if (ordi === tab[2] && choice === "pierre"){
     alert ("Vous avez gagné");
     compteurChoice ++;
-    alert(compteurOrdi + "-" + compteurChoice)
+    alert("ordi" + " " +compteurOrdi + "-" + "vous" + " " + compteurChoice)
    }
    else{
     alert ("Vous avez perdu");
     compteurOrdi ++;
-    alert(compteurOrdi + "-" + compteurChoice)
+    alert("ordi" + " " +compteurOrdi + "-" + "vous" + " " + compteurChoice)
    }
   }
- // return score += compteurOrdi + "-" + compteurChoice + " " +"Manche fini";
+  while (compteurChoice !== 3 && compteurOrdi !== 3);
+  return score += compteurOrdi + "-" + compteurChoice + " " +"Manche fini";
 }
 
 game();
