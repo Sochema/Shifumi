@@ -1,12 +1,15 @@
-var tab = ["pierre", "feuille", "ciseaux"];
-var ordi = tab[parseInt(Math.random()*tab.length)];
-var choice = prompt("pierre, feuille ou ciseaux?");
+function game(){
 var score = "";
 var compteurOrdi = 0;
 var compteurChoice = 0;
 
-function game(){
-  do {
+  while (compteurChoice !== 3 && compteurOrdi !== 3){
+
+var tab = ["pierre", "feuille", "ciseaux"];
+var ordi = tab[parseInt(Math.random()*tab.length)];
+var choice = prompt("pierre, feuille ou ciseaux?");
+
+
     if (ordi === choice){
       alert("égalité");
       alert("ordi" + " " + compteurOrdi + "-" + "vous" + " " +compteurChoice)
@@ -32,7 +35,6 @@ function game(){
     alert("ordi" + " " +compteurOrdi + "-" + "vous" + " " + compteurChoice)
    }
   }
-  while (compteurChoice !== 3 && compteurOrdi !== 3);
   return score += compteurOrdi + "-" + compteurChoice + " " +"Manche fini";
 }
 
