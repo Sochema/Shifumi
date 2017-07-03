@@ -1,21 +1,27 @@
 var tab = ["pierre", "feuille", "ciseaux"];
-var ordi = tab[Math.trunc(Math.random()*tab.length)];
+var ordi = tab[parseInt(Math.random()*tab.length)];
 var choice = prompt("pierre, feuille ou ciseaux?");
-
-
-// boucle jouer la partie 3 fois for
+var score = "";
 
 function game(){
-  if (ordi === choice){
-    alert("égalité");
+  //for (i=0; i<; i++){
+    if (ordi === choice){
+      alert("égalité");
+    }
+   else if(ordi === tab[0] && choice === "feuille"){
+     alert ("Vous avez gagné");
+   }
+   else if (ordi === tab[1] && choice === "ciseaux"){
+     alert ("Vous avez gagné");
+   }
+   else if (ordi === tab[2] && choice === "pierre"){
+    alert ("Vous avez gagné");
+   }
+   else{
+    alert ("Vous avez perdu");
+   }
   }
- else if( ){
-   alert ("gagné");
- }
-  else{
-    alert ("perdu");
-  }
-
-}
+  return score += "Manche fini";
+//}
 
 game();
