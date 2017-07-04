@@ -35,7 +35,7 @@ var choice = prompt("pierre, feuille ou ciseaux?");
     alert("ordi" + " " +compteurOrdi + "-" + "vous" + " " + compteurChoice)
    }
   }
-  return score += compteurOrdi + "-" + compteurChoice + " " +"Manche fini";
+  alert(score = "Manche fini" + + " " + compteurOrdi + "-" + compteurChoice);
 }
 
 game();
