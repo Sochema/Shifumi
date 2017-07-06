@@ -16,6 +16,70 @@ html {
     line-height: 1.4;
 }
 
+h1 {
+  font-size: 40px;
+  font-family:"Anton", sans-serif;
+  text-align: center;
+  margin: 0;
+
+}
+
+
+header nav {
+  background-color: #79D1C3;
+}
+
+header nav ul {
+  text-align: center;
+  list-style: none;
+
+}
+
+
+
+
+
+
+/* FOOTER */
+
+footer {
+  background-color: #6892D5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
