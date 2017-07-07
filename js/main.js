@@ -10,6 +10,7 @@ for (i=0; i<images.length; i++){
 }
 
 
+
 function button(){
   user.innerHTML = nameInput.value;
   jeu.style.visibility = "visible";
@@ -17,7 +18,7 @@ function button(){
 
 
 function game(choice){
-//var score = "";
+var score = "";
 var compteurOrdi = 0;
 var compteurChoice = 0;
 
