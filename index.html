@@ -18,6 +18,9 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.png" type="image/x-icon">
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Skranji" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
@@ -33,75 +36,46 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-  <!-- TU CODE ICI -->
-
 
   <header>
     <nav>
       <h1>ROCK PAPER SCISSORS</h1>
-      <ul>
-        <!-- <input type="text" name="search" placeholder="Rechercher..">  à la place mettre le nom utilisateur-->
-        <li><i class="fa fa-user-circle-o" aria-hidden="true"></i>USER NAME</li>
-      </ul>
     </nav>
   </header>
 
+<div class="jouer">
+  <input id="nameInput" type="text" name="" value="" placeholder="Enter username">
+  <button type="button" class="btn btn-info" onclick="button()">PLAY</button>
+</div>
 
-  <<button type="button" class="btn btn-secondary">Secondary</button>
+<article id="jeu">
 
-
-    <div class="icons">
-      <div class="" id="ordi">
+      <div class="icons" id="choice">
         <figure>
-          <img src="img/paper.jpeg" alt="paper">
-          <img src="img/scissors.jpeg" alt="scissors">
-          <img src="img/rock.jpeg" alt="rock">
+          <img class="images" src="img/paper.jpeg" alt="feuille">
+          <img class="images" src="img/scissors.jpeg" alt="ciseaux">
+          <img class="images" src="img/rock.jpeg" alt="pierre">
         </figure>
       </div>
 
 
+      <div id="compteur">
+        <p>SCORE</p>
+        <p id="user"><i class="fa fa-user" aria-hidden="true"></i></p>
+        <p><i class="fa fa-android" aria-hidden="true"></i>COMPUTER</p>
 
-      <div class="" id="compteur">
-        <p> COMPTEUR </p>
       </div>
 
 
-
-      <div class="" id="choice">
-        <img src="img/paper.jpeg" alt="paper">
-        <img src="img/scissors.jpeg" alt="scissors">
-        <img src="img/rock.jpeg" alt="rock">
+      <div class="icons" id="ordi">
+        <figure>
+          <img id="1" src="img/paper.jpeg" alt="feuille">
+          <img id="2" src="img/scissors.jpeg" alt="ciseaux">
+          <img id="3" src="img/rock.jpeg" alt="pierre">
+        </figure>
       </div>
 
-    </div>
-
-
-    <footer>
-
-
-    </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  </article>
 
 
 
@@ -134,7 +108,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/plugins.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,23 @@
-function game(){
-var score = "";
+var user = document.getElementById("user");
+var jeu = document.getElementById("jeu");
+var nameInput = document.getElementById("nameInput");
+var images = document.getElementsByClassName("images");
+
+for (i=0; i<images.length; i++){
+  images[i].onclick = function(){
+     game(this.alt);
+  };
+}
+
+
+function button(){
+  user.innerHTML = nameInput.value;
+  jeu.style.visibility = "visible";
+}
+
+
+function game(choice){
+//var score = "";
 var compteurOrdi = 0;
 var compteurChoice = 0;
 
@@ -7,7 +25,7 @@ var compteurChoice = 0;
 
 var tab = ["pierre", "feuille", "ciseaux"];
 var ordi = tab[parseInt(Math.random()*tab.length)];
-var choice = prompt("pierre, feuille ou ciseaux?");
+
 
 
     if (ordi === choice){
@@ -35,7 +53,10 @@ var choice = prompt("pierre, feuille ou ciseaux?");
     alert("ordi" + " " +compteurOrdi + "-" + "vous" + " " + compteurChoice)
    }
   }
-  alert(score = "Manche terminée" + " " + compteurOrdi + "-" + compteurChoice);
+  document.getElementById("compteur").innerHTML = (score = "Manche terminée" + " " + compteurOrdi + "-" + nameInput + " " + compteurChoice);
 }
 
-game();
+
+
+
+/*document.getElementById("jeu").innerHTML= game();*/
