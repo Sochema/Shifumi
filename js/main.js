@@ -1,61 +1,76 @@
 var user = document.getElementById("user");
 var jeu = document.getElementById("jeu");
-var nameInput = document.getElementById("nameInput");
+var nameInput = "";
 var images = document.getElementsByClassName("images");
+var score = "";
+var compteurOrdi = 0;
+var compteurChoice = 0;
+var tab = ["pierre", "feuille", "ciseaux"];
+var ordi = tab[parseInt(Math.random() * tab.length)];
 
-for (i=0; i<images.length; i++){
-  images[i].onclick = function(){
-     game(this.alt);
+// POUR VISER MON ALT
+
+for (i = 0; i < images.length; i++) {
+  images[i].onclick = function() {
+    game(this.alt);
   };
 }
 
 
+//ANIMATION IMAGES CHOISIE PAR JOUEUR
+images.addEventListener("onmouseover", function(){
+  images.style.opacity = "1";
+}
+)
 
-function button(){
+images.addEventListener("onmouseout", function(){
+  images.style.opacity = "1";
+}
+)
+
+
+// POUR QUE LE BOUTON AFFICHE LE JEU
+function button() {
+  nameInput = document.getElementById("nameInput").value;
   user.innerHTML = nameInput.value;
   jeu.style.visibility = "visible";
+  
 }
 
 
-function game(choice){
-var score = "";
-var compteurOrdi = 0;
-var compteurChoice = 0;
+// FONCTION DU JEU
+function game(choice) {
 
-  while (compteurChoice !== 3 && compteurOrdi !== 3){
-
-var tab = ["pierre", "feuille", "ciseaux"];
-var ordi = tab[parseInt(Math.random()*tab.length)];
-
-
-
-    if (ordi === choice){
-      alert("égalité");
-      alert("ordi" + " " + compteurOrdi + "-" + "vous" + " " +compteurChoice)
+  if (compteurChoice !== 3 && compteurOrdi !== 3) {
+    if (ordi === choice) {
+      compteurChoice;
+      compteurOrdi;
+      document.getElementById("compteur").innerHTML = (score = compteurOrdi + "-" + nameInput + " " + compteurChoice);
+    } else if (ordi === tab[0] && choice === "feuille") {
+      compteurChoice++;
+      document.getElementById("compteur").innerHTML = (score = compteurOrdi + "-" + nameInput + " " + compteurChoice);
+    } else if (ordi === tab[1] && choice === "ciseaux") {
+      compteurChoice++;
+      document.getElementById("compteur").innerHTML = (score = compteurOrdi + "-" + nameInput + " " + compteurChoice);
+    } else if (ordi === tab[2] && choice === "pierre") {
+      compteurChoice++;
+      document.getElementById("compteur").innerHTML = (score = compteurOrdi + "-" + nameInput + " " + compteurChoice);
+    } else {
+      compteurOrdi++;
+      document.getElementById("compteur").innerHTML = (score = compteurOrdi + "-" + nameInput + " " + compteurChoice);
     }
-   else if(ordi === tab[0] && choice === "feuille"){
-     alert ("Vous avez gagné");
-     compteurChoice ++;
-     alert("ordi" + " " +compteurOrdi + "-" + "vous" + " " + compteurChoice)
-   }
-   else if (ordi === tab[1] && choice === "ciseaux"){
-     alert ("Vous avez gagné");
-     compteurChoice ++;
-     alert("ordi" + " " +compteurOrdi + "-" + "vous" + " " +compteurChoice)
-   }
-   else if (ordi === tab[2] && choice === "pierre"){
-    alert ("Vous avez gagné");
-    compteurChoice ++;
-    alert("ordi" + " " +compteurOrdi + "-" + "vous" + " " + compteurChoice)
-   }
-   else{
-    alert ("Vous avez perdu");
-    compteurOrdi ++;
-    alert("ordi" + " " +compteurOrdi + "-" + "vous" + " " + compteurChoice)
-   }
+  } else {
+      if (compteurOrdi === 3){
+    document.getElementById("compteur").innerHTML = (score = "Manche terminée" + "\nL'ordinateur gagne" + "\n" + compteurOrdi + "-" + nameInput + " " + compteurChoice);
   }
-  document.getElementById("compteur").innerHTML = (score = "Manche terminée" + " " + compteurOrdi + "-" + nameInput + " " + compteurChoice);
+  else {
+    document.getElementById("compteur").innerHTML = (score = "Manche terminée" + "\nVous avez gagné" + "\n" + compteurOrdi + "-" + nameInput + " " + compteurChoice);
+  }
+
+  }
 }
+
+
 
 
 

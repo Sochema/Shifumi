@@ -31,10 +31,6 @@ h1 {
 
 }
 
-/* header nav {
-  background-color: rgb(91, 192, 222);
-} */
-
 header nav ul li {
   text-align: center;
   list-style: none;
@@ -47,7 +43,6 @@ header nav ul li {
   justify-content: center;
   padding-top: 3%;
 }
-
 
 
 
@@ -68,7 +63,6 @@ header nav ul li {
   text-align: center;
   margin-left: 25%;
   margin-right: 25%;
-
 }
 
 
@@ -87,12 +81,6 @@ header nav ul li {
 
 }
 
-
-/* FOOTER */
-
-footer {
-  background-color: #6892D5;
-}
 
 
 /*
