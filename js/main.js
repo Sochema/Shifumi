@@ -7,6 +7,7 @@ var compteurOrdi = 0;
 var compteurChoice = 0;
 var tab = ["pierre", "feuille", "ciseaux"];
 var ordi = tab[parseInt(Math.random() * tab.length)];
+var restartGame = document.getElementsByClassName("restart");
 
 // POUR VISER MON ALT
 
@@ -16,25 +17,33 @@ for (i = 0; i < images.length; i++) {
   };
 }
 
-
-//ANIMATION IMAGES CHOISIE PAR JOUEUR
-images.addEventListener("onmouseover", function(){
-  images.style.opacity = "1";
-}
-)
-
-images.addEventListener("onmouseout", function(){
-  images.style.opacity = "1";
-}
-)
-
-
 // POUR QUE LE BOUTON AFFICHE LE JEU
 function button() {
   nameInput = document.getElementById("nameInput").value;
   user.innerHTML = nameInput.value;
   jeu.style.visibility = "visible";
-  
+  // button.onclick.reset(game(choice));
+}
+
+//POUR REJOUER//
+// ??
+
+//ANIMATION IMAGES CHOISIE PAR JOUEUR
+
+function animation(images) {
+  var images = document.getElementsByClassName("images");
+  var pos = 0;
+  var id = setInterval(shake, 100);
+
+  function shake() {
+    if (pos == 100) {
+      clearInterval(id);
+    } else {
+      pos++;
+      images.style.left = pos + 'px';
+      images.style.top = pos + 'px';
+    }
+  }
 }
 
 
@@ -60,15 +69,11 @@ function game(choice) {
       document.getElementById("compteur").innerHTML = (score = compteurOrdi + "-" + nameInput + " " + compteurChoice);
     }
   } else {
-      if (compteurOrdi === 3){
-    document.getElementById("compteur").innerHTML = (score = "Manche terminée" + "\nL'ordinateur gagne" + "\n" + compteurOrdi + "-" + nameInput + " " + compteurChoice);
-  }
-  else {
-    document.getElementById("compteur").innerHTML = (score = "Manche terminée" + "\nVous avez gagné" + "\n" + compteurOrdi + "-" + nameInput + " " + compteurChoice);
-  }
-
+    document.getElementById("compteur").innerHTML = (score = "Manche terminée" + "\nGame Over" + "\n" + compteurOrdi + "-" + nameInput + " " + compteurChoice);
+    // document.getElementById("compteur").innerHTML = (score = "Manche terminée" + "\nYou Win" + "\n" + compteurOrdi + "-" + nameInput + " " + compteurChoice);
   }
 }
+
 
 
 
