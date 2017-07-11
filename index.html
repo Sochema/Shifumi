@@ -43,24 +43,24 @@
 
 <div class="jouer">
   <input id="nameInput" type="text" name="" value="" placeholder="Enter username">
-  <button type="button" class="btn btn-info" onclick="button()">PLAY</button>
+  <button type="button" class="btn btn-info" onclick="button()"=>PLAY</button>
 </div>
 
 <article id="jeu">
 
       <div class="icons" id="choice">
         <figure>
-          <img onmouseover="animation(this)" class="images" src="img/paper.jpeg" alt="feuille">
-          <img onmouseover="animation(this)" class="images" src="img/scissors.jpeg" alt="ciseaux">
-          <img onmouseover="animation(this)" class="images" src="img/rock.jpeg" alt="pierre">
+          <img onmouseover="colorChange(this)" onmouseout="colorNormal(this)" class="images" src="img/paper.jpeg" alt="feuille">
+          <img onmouseover="colorChange(this)" onmouseout="colorNormal(this)" class="images" src="img/scissors.jpeg" alt="ciseaux">
+          <img onmouseover="colorChange(this)" onmouseout="colorNormal(this)" class="images" src="img/rock.jpeg" alt="pierre">
         </figure>
       </div>
 
 
       <div id="compteur">
-        <p>SCORE</p>
-        <p><i class="fa fa-user" aria-hidden="true"></i><span id="user"></span></p>
-        <p><i class="fa fa-android" aria-hidden="true"></i>COMPUTER</p>
+        <span>SCORE</span>
+        <p id="user"></p>
+        <p id="computer"></p>
 
       </div>
 
@@ -75,9 +75,9 @@
 
   </article>
 
-<div class="restart">
-  <button type="button" class="btn btn-info" onclick="button()">REPLAY</button>
-</div>
+<!-- <div id="restart">
+  <button type="button" class="btn btn-info">REPLAY</button>
+</div> -->
 
 
 
